@@ -1,0 +1,77 @@
+
+table.emp_list {
+    width: 100%;
+    border-spacing: 1px;
+    background-color: #D9DBAD;
+    color: #333;
+}
+
+table.emp_list td,
+table.emp_list th { padding: 4px; padding: 0px\9; }
+
+table.emp_list thead th {
+    text-align: center;
+    background-color: #b8cce4;
+    color: #06274e;
+    border-bottom: 1px solid #3c4480;
+    border-left: 1px solid #fff;
+}
+
+table.emp_list thead a:hover { text-decoration: none; }
+
+table.emp_list thead th img { vertical-align: middle; }
+
+table.emp_list tbody th { font-weight: bold; }
+
+table.emp_list tbody tr			{ background-color: #fff;  text-align: left; }
+table.emp_list tbody tr.row1 	{ background: #EFEFDC; border-top: 1px solid #fff; }
+
+table.emp_list tbody tr.row0:hover td,
+table.emp_list tbody tr.row1:hover td  { background-color: #ffd ; }
+
+
+
+.pagination {
+padding:0.3em;
+text-align:right;
+}
+.pagination a, .pagination span {
+padding:0.2em 0.5em;
+}
+.pagination span.disabled {
+color:#AAAAAA;
+}
+.pagination span.current {
+color:#8FBF5D;
+font-weight:bold;
+}
+.pagination a {
+border:1px solid #DDDDDD;
+color:#0063DC;
+text-decoration:none;
+}
+.pagination a:hover, .pagination a:focus {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#0063DC none repeat scroll 0 0;
+border-color:#003366;
+color:white;
+}
+.pagination .page_info {
+color:#AAAAAA;
+padding-top:0.8em;
+}
+.pagination .prev_page, .pagination .next_page {
+border-width:1px;
+}
+
+
+.clear {
+    clear:both;
+    height:0px;
+}
+
+.create_new{
+    float: right; font-size: 12px; padding-bottom:10px;
+}
