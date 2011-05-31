@@ -1,0 +1,78 @@
+<table>
+  <tr>
+    <td>Name</td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><%= f.text_field :email %></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><%= f.text_field :phone_number %></td>
+  </tr>
+  <tr>
+    <td>organization</td>
+    <td><%= f.text_field :organization %></td>
+  </tr>
+  <tr>
+    <td>Designation</td>
+    <td><%= f.text_field :designation %></td>
+  </tr>
+  <tr>
+    <td>Current Organization</td>
+    <td><%= f.text_field :current_organization %></td>
+  </tr>
+  <tr>
+    <td>Total Experience</td>
+    <td><%= f.text_field :total_experience %></td>
+  </tr>
+  <tr>
+    <td>Relevant Experience</td>
+    <td><%= f.text_field :relevant_experience %></td>
+  </tr>
+  <tr>
+    <td>Current CTC</td>
+    <td><%= f.text_field :current_ctc %></td>
+  </tr>
+  <tr>
+    <td>Expected CTC</td>
+    <td><%= f.text_field :expected_ctc %></td>
+  </tr>
+  <tr>
+    <td>Notice Period</td>
+    <td><%= f.text_field :notice_period %></td>
+  </tr>
+  <tr>
+    <td>Permanent/Contract</td>
+    <td><%= f.select :employee_type, ["Permanent", "Contract"] %></td>
+  </tr>
+  <tr>
+    <td>Year of Passout </td>
+    <td><%= f.text_field :year_of_passout %></td>
+  </tr>
+  <tr>
+    <td>DOB</td>
+    <td><%= f.text_field :date_of_birth %></td>
+  </tr>
+  <tr>
+    <td>Qualification</td>
+    <td><%= f.text_field :qualification_id %></td>
+  </tr>
+  <tr>
+    <td>Current Location</td>
+    <td><%= f.text_field :current_location_id %></td>
+  </tr>
+  <tr>
+    <td>Preferred Location</td>
+    <td><%= f.text_field :preferred_location_id %></td>
+  </tr>
+  <tr>
+    <td>Passport number</td>
+    <td><%= f.text_field :passport_number %></td>
+  </tr>
+  <tr>
+    <td>Pan number</td>
+    <td><%= f.text_field :pan_number %></td>
+  </tr>
+</table>
