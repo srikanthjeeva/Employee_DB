@@ -1,0 +1,18 @@
+<h1>Listing qualifications</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @qualifications.each do |qualification| %>
+  <tr>
+    <td><%= link_to 'Show', qualification %></td>
+    <td><%= link_to 'Edit', edit_qualification_path(qualification) %></td>
+    <td><%= link_to 'Destroy', qualification, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New qualification', new_qualification_path %>

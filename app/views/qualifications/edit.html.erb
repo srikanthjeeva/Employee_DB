@@ -1,0 +1,12 @@
+<h1>Editing qualification</h1>
+
+<% form_for(@qualification) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @qualification %> |
+<%= link_to 'Back', qualifications_path %>
