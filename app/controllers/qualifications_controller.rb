@@ -1,8 +1,9 @@
 class QualificationsController < ApplicationController
   # GET /qualifications
   # GET /qualifications.xml
+  layout "application"
   def index
-    @qualifications = Qualification.all
+    @qualifications = Qualification.all(:order => "name").paginate(:per_page => 20, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +45,7 @@ class QualificationsController < ApplicationController
 
     respond_to do |format|
       if @qualification.save
-        format.html { redirect_to(@qualification, :notice => 'Qualification was successfully created.') }
+        format.html { redirect_to(qualifications_url, :notice => 'Qualification was successfully created.') }
         format.xml  { render :xml => @qualification, :status => :created, :location => @qualification }
       else
         format.html { render :action => "new" }
@@ -60,7 +61,7 @@ class QualificationsController < ApplicationController
 
     respond_to do |format|
       if @qualification.update_attributes(params[:qualification])
-        format.html { redirect_to(@qualification, :notice => 'Qualification was successfully updated.') }
+        format.html { redirect_to(qualifications_url, :notice => 'Qualification was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

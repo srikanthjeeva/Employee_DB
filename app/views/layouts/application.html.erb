@@ -1,51 +1,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
-
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
-    <meta name="description" content="description"/>
-    <meta name="keywords" content="keywords"/>
-    <meta name="author" content="author"/>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/default.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
     <title>RS-Database</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/default.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen"/>
     <%= javascript_include_tag :defaults %>
+    <%= c = controller.controller_name %>
   </head>
-
   <body>
-    <div class="top">
-      <div class="header">
-        <div class="left">
-	  RS-Database
+
+    <div id="upbg"></div>
+
+    <div id="outer">
+      <div id="header">
+        <div id="headercontent">
+          <h1>RS-Database</h1>
+          <h2>Human Resources</h2>
         </div>
+      </div>
 
-        <div class="right">
-          <h2>Tristique porta</h2>
-          <p>Fusce porta pede nec eros. Maecenas ipsum sem, interdum non, aliquam vitae, interdum nec, metus. Maecenas ornare lobortis risus.</p>
+
+      <form method="post" action="">
+        <div id="search">
+          <input type="text" class="text" maxlength="64" name="keywords" />
+          <input type="submit" class="submit" value="Search" />
+        </div>
+      </form>
+
+      <div id="menu">
+        <!-- HINT: Set the class of any menu link below to "active" to make it appear active -->
+        <ul>
+          <li><a href="/users" class="<%= 'active' if c == 'users' %>">Employees</a></li>
+          <li><a href="/qualifications" class="<%= 'active' if c == 'qualifications' %>">Qualifications</a></li>
+          <li><a href="/locations" class="<%= 'active' if c == 'locations' %>">Locations</a></li>
+        </ul>
+      </div>
+      <div id="menubottom"></div>
+
+
+      <div id="content">
+        <!-- Normal content: Stuff that's not going to be put in the left or right column. -->
+        <div id="normalcontent">
+          <%= yield %>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="navigation">
-        <a href="/users">Users</a>
-        <a href="/settings">Settings</a>
-        <div class="clearer"><span></span></div>
-      </div>
-
-      <div class="main">
-
-        <%= yield %>
-
-        <div class="clearer"><span></span></div>
-
-      </div>
-
-      <div class="footer">&copy; 2011 RS
+      <div id="footer">
+        <div class="left">&copy; 2011 RS DB. All rights reserved.</div>
+        <div class="right">Powered by <a href="http://srikanthjeeva.blogspot.com">Srikanth Jeeva</a></div>
       </div>
 
     </div>
 
   </body>
-
 </html>

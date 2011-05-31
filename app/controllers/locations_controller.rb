@@ -1,8 +1,9 @@
 class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
+  layout "application"
   def index
-    @locations = Location.all
+    @locations = Location.all(:order => "name").paginate(:per_page => 20, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +45,7 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       if @location.save
-        format.html { redirect_to(@location, :notice => 'Location was successfully created.') }
+        format.html { redirect_to(locations_path, :notice => 'Location was successfully created.') }
         format.xml  { render :xml => @location, :status => :created, :location => @location }
       else
         format.html { render :action => "new" }
@@ -60,7 +61,7 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       if @location.update_attributes(params[:location])
-        format.html { redirect_to(@location, :notice => 'Location was successfully updated.') }
+        format.html { redirect_to(locations_path, :notice => 'Location was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

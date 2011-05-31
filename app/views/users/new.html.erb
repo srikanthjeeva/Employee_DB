@@ -3,34 +3,9 @@
 
   <% form_for(@user) do |f| %>
     <%= f.error_messages %>
-
+    <%= render :partial => "form", :locals => {:f => f} %>
     <p>
       <%= f.submit 'Create' %>
     </p>
   <% end %>
-</div>
-<div class="sidenav">
-  <h2>Something</h2>
-  <ul>
-    <li><a href="index.html">pellentesque</a></li>
-    <li><a href="index.html">sociis natoque</a></li>
-    <li><a href="index.html">semper</a></li>
-    <li><a href="index.html">convallis</a></li>
-  </ul>
-
-  <h2>Another thing</h2>
-  <ul>
-    <li><a href="index.html">consequat molestie</a></li>
-    <li><a href="index.html">sem justo</a></li>
-    <li><a href="index.html">semper</a></li>
-    <li><a href="index.html">sociis natoque</a></li>
-  </ul>
-
-  <h2>Third and last</h2>
-  <ul>
-    <li><a href="index.html">sociis natoque</a></li>
-    <li><a href="index.html">magna sed purus</a></li>
-    <li><a href="index.html">tincidunt</a></li>
-    <li><a href="index.html">consequat molestie</a></li>
-  </ul>
 </div>

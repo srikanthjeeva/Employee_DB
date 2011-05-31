@@ -4,7 +4,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :phone_number
-      t.string :name
       t.string :organization
       t.string :designation
       t.string :current_organization

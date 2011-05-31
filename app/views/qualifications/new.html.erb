@@ -2,10 +2,16 @@
 
 <% form_for(@qualification) do |f| %>
   <%= f.error_messages %>
-
+  <table>
+  <tr>
+    <td>Name</td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  </table>
   <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
 <%= link_to 'Back', qualifications_path %>
+  

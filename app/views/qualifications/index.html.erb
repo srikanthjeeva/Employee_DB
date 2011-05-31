@@ -1,18 +1,28 @@
-<h1>Listing qualifications</h1>
-
-<table>
-  <tr>
-  </tr>
-
-<% @qualifications.each do |qualification| %>
-  <tr>
-    <td><%= link_to 'Show', qualification %></td>
-    <td><%= link_to 'Edit', edit_qualification_path(qualification) %></td>
-    <td><%= link_to 'Destroy', qualification, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New qualification', new_qualification_path %>
+<div class="contentarea">
+  <div>
+    <h3><strong>Qualifications</strong></h3>
+    <div class="create_new"><%= link_to image_tag('/images/edit.png', :title => "Create"), new_qualification_path %></div>
+  </div>
+  <div class="clear"></div>
+  <div class="content">
+    <table class="emp_list">
+      <thead>
+        <tr>
+          <td width="24%">Name</td>
+          <td width="10%">Options</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @qualifications.each_with_index do |qualification, index| %>
+          <tr class="row<%= index % 2 %>">
+            <td><%= qualification.name %></td>
+            <td>&nbsp;&nbsp; <%= link_to image_tag('/images/edit.png', :title => "Edit"), edit_qualification_path(qualification) %> &nbsp;&nbsp;
+              <%= link_to image_tag('/images/delete.png', :title => "Delete"), qualification, :confirm => 'Are you sure?', :method => :delete %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div style="padding: 10px"></div>
+    <%= will_paginate @qualifications %>
+  </div>
+</div>
