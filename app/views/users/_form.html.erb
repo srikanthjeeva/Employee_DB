@@ -57,15 +57,20 @@
   </tr>
   <tr>
     <td>Qualification</td>
-    <td><%= f.text_field :qualification_id %></td>
+    <td>
+    <%= select_tag "user[qualification_id]", "<option> -- </option>" + options_from_collection_for_select(Qualification.all, :id, :name, @user.qualification_id) %>
+    </td>
   </tr>
   <tr>
     <td>Current Location</td>
-    <td><%= f.text_field :current_location_id %></td>
+    <td><%= select_tag "user[current_location_id]", "<option> -- </option>" + options_from_collection_for_select(Location.all, :id, :name, @user.current_location_id) %>
+    </td>
   </tr>
   <tr>
     <td>Preferred Location</td>
-    <td><%= f.text_field :preferred_location_id %></td>
+    <td>
+      <%= select_tag "user[preferred_location_id]", "<option> -- </option>" + options_from_collection_for_select(Location.all, :id, :name, @user.preferred_location_id) %>
+    </td>
   </tr>
   <tr>
     <td>Passport number</td>
