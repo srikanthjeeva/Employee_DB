@@ -7997,3 +7997,232 @@ Rendering users/show
   [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 12 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
   [4;35;1mAttachment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `attachments`[0m
 Completed in 58ms (View: 43, DB: 9) | 200 OK [http://localhost/users/12]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QualificationsController#index (for 127.0.0.1 at 2011-06-01 15:40:22) [GET]
+  [4;35;1mQualification Load (0.2ms)[0m   [0mSELECT * FROM `qualifications` ORDER BY name[0m
+Rendering template within layouts/application
+Rendering qualifications/index
+  [4;36;1mQualification Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `qualifications`[0m
+Completed in 47ms (View: 36, DB: 2) | 200 OK [http://localhost/qualifications]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QualificationsController#new (for 127.0.0.1 at 2011-06-01 15:40:25) [GET]
+  [4;36;1mQualification Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `qualifications`[0m
+Rendering template within layouts/application
+Rendering qualifications/new
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/qualifications/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2011-06-01 15:40:27) [GET]
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY name[0m
+Rendering template within layouts/application
+Rendering locations/index
+  [4;35;1mLocation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SkillsController#index (for 127.0.0.1 at 2011-06-01 15:40:28) [GET]
+  [4;35;1mSkill Load (0.1ms)[0m   [0mSELECT * FROM `skills` [0m
+Rendering template within layouts/application
+Rendering skills/index
+  [4;36;1mSkill Columns (7.6ms)[0m   [0;1mSHOW FIELDS FROM `skills`[0m
+Completed in 29ms (View: 17, DB: 8) | 200 OK [http://localhost/skills]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-06-01 15:40:30) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mQualification Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `qualifications`[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 4 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 6 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 9 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 10 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 8 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.5ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 5 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 1) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 7 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 11 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 2) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 3 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 2) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 12 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+Completed in 92ms (View: 78, DB: 8) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-06-01 15:42:00) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mQualification Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `qualifications`[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.1ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 4 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.7ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 6 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.5ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 9 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 10 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 8 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.2ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 5 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 1) [0m
+  [4;36;1mAttachment Load (0.3ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 7 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mAttachment Load (0.5ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 11 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 2) [0m
+  [4;36;1mAttachment Load (0.6ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 3 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 2) [0m
+  [4;36;1mAttachment Load (0.5ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 12 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+Completed in 98ms (View: 82, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-06-01 15:42:05) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) [0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mQualification Load (0.1ms)[0m   [0;1mSELECT * FROM `qualifications` [0m
+  [4;35;1mQualification Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mSkill Load (0.1ms)[0m   [0;1mSELECT * FROM `skills` [0m
+  [4;35;1mSkill Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `skills`[0m
+  [4;36;1mskills_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `skills_users`[0m
+  [4;35;1mSkill Load (0.1ms)[0m   [0mSELECT * FROM `skills` INNER JOIN `skills_users` ON `skills`.id = `skills_users`.skill_id WHERE (`skills_users`.user_id = 12 ) [0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendered users/_form (27.8ms)
+Completed in 61ms (View: 32, DB: 6) | 200 OK [http://localhost/users/12/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2011-06-01 15:42:11) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"CE30LY/yZh0yuqSKIGSWZ85x3KIIiKzys/bmEvrdV6k=", "id"=>"12", "user"=>{"passport_number"=>"fghgf", "name"=>"Sudhar", "skill_ids"=>["1", "2"], "year_of_passout"=>"1940", "pan_number"=>"hgfh", "current_location_id"=>"1", "qualification_id"=>"--", "employee_type"=>"Contract", "current_ctc"=>"hfju", "current_organization"=>"sfds", "designation"=>"dsfd", "expected_ctc"=>"ytuy", "relevant_experience"=>"uytu", "phone_number"=>"sdfsdfdsf", "total_experience"=>"gghfg", "date_of_birth"=>"June 15, 2011", "organization"=>"dsfdsf", "preferred_location_id"=>"2", "notice_period"=>"tyu", "email"=>"sdfsdf"}}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) [0m
+  [4;36;1mSkill Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `skills`[0m
+  [4;35;1mSkill Load (0.1ms)[0m   [0mSELECT * FROM `skills` WHERE (`skills`.`id` IN (1,2)) [0m
+  [4;36;1mskills_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `skills_users`[0m
+  [4;35;1mSkill Load (0.1ms)[0m   [0mSELECT * FROM `skills` INNER JOIN `skills_users` ON `skills`.id = `skills_users`.skill_id WHERE (`skills_users`.user_id = 12 ) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2011-06-01 10:12:11', `year_of_passout` = '1940', `qualification_id` = '--', `date_of_birth` = '2011-06-15 00:00:00' WHERE `id` = 12[0m
+  [4;36;1mSQL (32.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/12
+Completed in 119ms (DB: 37) | 302 Found [http://localhost/users/12]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-06-01 15:42:11) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mQualification Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `qualifications`[0m
+  [4;35;1mQualification Load (0.1ms)[0m   [0mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;36;1mskills_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `skills_users`[0m
+  [4;35;1mSkill Load (0.1ms)[0m   [0mSELECT * FROM `skills` INNER JOIN `skills_users` ON `skills`.id = `skills_users`.skill_id WHERE (`skills_users`.user_id = 12 ) [0m
+  [4;36;1mSkill Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `skills`[0m
+  [4;35;1mLocation Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.0ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 2) [0m
+  [4;36;1mAttachment Load (1.7ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 12 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mAttachment Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `attachments`[0m
+Completed in 66ms (View: 48, DB: 11) | 200 OK [http://localhost/users/12]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-06-01 15:44:24) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 12) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mQualification Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mQualification Load (0.1ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.`id` = 0) [0m
+  [4;35;1mskills_users Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `skills_users`[0m
+  [4;36;1mSkill Load (0.3ms)[0m   [0;1mSELECT * FROM `skills` INNER JOIN `skills_users` ON `skills`.id = `skills_users`.skill_id WHERE (`skills_users`.user_id = 12 ) [0m
+  [4;35;1mSkill Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `skills`[0m
+  [4;36;1mLocation Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2) [0m
+  [4;35;1mAttachment Load (2.0ms)[0m   [0mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 12 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;36;1mAttachment Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `attachments`[0m
+Completed in 76ms (View: 56, DB: 10) | 200 OK [http://localhost/users/12]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-01 15:44:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/calendar_date_select/blue.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-01 15:44:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/calendar_date_select/calendar_date_select.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#download_file (for 127.0.0.1 at 2011-06-01 15:44:40) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) [0m
+  [4;36;1mAttachment Load (0.4ms)[0m   [0;1mSELECT * FROM `attachments` WHERE (`attachments`.attachable_id = 12 AND `attachments`.attachable_type = 'User') LIMIT 1[0m
+  [4;35;1mAttachment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `attachments`[0m
+Completed in 40ms (View: 1, DB: 3) | 200 OK [http://localhost/users/12/download_file]
+Streaming file /home/kaveri/projects/Employee_DB/public/attachments/0000/0008/70966869iw0.jpg
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QualificationsController#index (for 127.0.0.1 at 2011-06-01 15:44:43) [GET]
+  [4;35;1mQualification Load (0.2ms)[0m   [0mSELECT * FROM `qualifications` ORDER BY name[0m
+Rendering template within layouts/application
+Rendering qualifications/index
+  [4;36;1mQualification Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `qualifications`[0m
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/qualifications]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-01 15:44:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/calendar_date_select/blue.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-01 15:44:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/calendar_date_select/calendar_date_select.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
