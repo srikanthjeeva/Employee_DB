@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   belongs_to :preferred_location, :class_name => "Location"
   belongs_to :current_location, :class_name => "Location"
   has_one :attachment, :as => :attachable, :dependent => :destroy
+  has_and_belongs_to_many :skills
+
+  validates_presence_of :name
   
   def preferred_location_name
     self.preferred_location.name rescue "-"

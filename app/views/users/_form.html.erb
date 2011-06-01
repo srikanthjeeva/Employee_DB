@@ -1,87 +1,112 @@
-<table>
+<table style="padding:20px">
   <tr>
-    <td>Name</td>
-    <td><%= f.text_field :name %></td>
+    <td width="30%" class="ali_rt">Name : </td>
+    <td width="60%"><%= f.text_field :name %></td>
   </tr>
   <tr>
-    <td>Email</td>
+    <td class="ali_rt">Email : </td>
     <td><%= f.text_field :email %></td>
   </tr>
   <tr>
-    <td>Phone</td>
+    <td class="ali_rt">Phone : </td>
     <td><%= f.text_field :phone_number %></td>
   </tr>
   <tr>
-    <td>organization</td>
+    <td class="ali_rt">organization : </td>
     <td><%= f.text_field :organization %></td>
   </tr>
   <tr>
-    <td>Designation</td>
+    <td class="ali_rt">Designation : </td>
     <td><%= f.text_field :designation %></td>
   </tr>
   <tr>
-    <td>Current Organization</td>
+    <td class="ali_rt">Current Organization : </td>
     <td><%= f.text_field :current_organization %></td>
   </tr>
   <tr>
-    <td>Total Experience</td>
+    <td class="ali_rt">Total Experience : </td>
     <td><%= f.text_field :total_experience %></td>
   </tr>
   <tr>
-    <td>Relevant Experience</td>
+    <td class="ali_rt">Relevant Experience : </td>
     <td><%= f.text_field :relevant_experience %></td>
   </tr>
   <tr>
-    <td>Current CTC</td>
+    <td class="ali_rt">Current CTC : </td>
     <td><%= f.text_field :current_ctc %></td>
   </tr>
   <tr>
-    <td>Expected CTC</td>
+    <td class="ali_rt">Expected CTC : </td>
     <td><%= f.text_field :expected_ctc %></td>
   </tr>
   <tr>
-    <td>Notice Period</td>
+    <td class="ali_rt">Notice Period : </td>
     <td><%= f.text_field :notice_period %></td>
   </tr>
   <tr>
-    <td>Permanent/Contract</td>
-    <td><%= f.select :employee_type, ["Permanent", "Contract"] %></td>
+    <td class="ali_rt">Permanent/Contract : </td>
+    <td><%= select :user, :employee_type, ["Permanent", "Contract"], {:selected=>@user.employee_type}, :class=>"width_250" %>
+    </td>
   </tr>
   <tr>
-    <td>Year of Passout </td>
-    <td><%= f.text_field :year_of_passout %></td>
+    <td class="ali_rt">Year of Passout : </td>
+    <td><%= select :user, :year_of_passout, (1940..Date.today.year).to_a, {:selected=>(@user.year_of_passout || Date.today.year)}, :class=>"width_250" %>
+    </td>
   </tr>
   <tr>
-    <td>DOB</td>
-    <td><%= f.text_field :date_of_birth %></td>
-  </tr>
-  <tr>
-    <td>Qualification</td>
+    <td class="ali_rt">DOB : </td>
     <td>
-    <%= select_tag "user[qualification_id]", "<option> -- </option>" + options_from_collection_for_select(Qualification.all, :id, :name, @user.qualification_id) %>
+      <input type="text" name="user[date_of_birth]" size="30" autofill="false" onselect="new CalendarDateSelect( this, {year_range:10} );" onclick="new CalendarDateSelect( this, {year_range:10} );" value="<% @user.date_of_birth || Date.today %>"/>
     </td>
   </tr>
   <tr>
-    <td>Current Location</td>
-    <td><%= select_tag "user[current_location_id]", "<option> -- </option>" + options_from_collection_for_select(Location.all, :id, :name, @user.current_location_id) %>
-    </td>
-  </tr>
-  <tr>
-    <td>Preferred Location</td>
+    <td class="ali_rt">Qualification : </td>
     <td>
-      <%= select_tag "user[preferred_location_id]", "<option> -- </option>" + options_from_collection_for_select(Location.all, :id, :name, @user.preferred_location_id) %>
+      <%= select_tag "user[qualification_id]", "<option> -- </option>" + options_from_collection_for_select(Qualification.all, :id, :name, @user.qualification_id), {:class=> "width_250"} %>
     </td>
   </tr>
   <tr>
-    <td>Passport number</td>
+    <td class="ali_rt">Skills : </td>
+    <td>    
+      <%= select_tag("user[skill_ids]", options_for_select(Skill.all.collect { |cat| [cat.name, cat.id] }, @user.skills.collect { |cat| cat.id}), {:multiple=>true, :size=>6, :class=> "width_250"})%>
+    </td>
+  </tr>
+  <tr>
+    <td class="ali_rt">Current Location : </td>
+    <td><%= select_tag "user[current_location_id]", "<option> -- </option>" + options_from_collection_for_select(Location.all, :id, :name, @user.current_location_id), {:class=> "width_250"} %>
+    </td>
+  </tr>
+  <tr>
+    <td class="ali_rt">Preferred Location : </td>
+    <td>
+      <%= select_tag "user[preferred_location_id]", "<option> -- </option>" + options_from_collection_for_select(Location.all, :id, :name, @user.preferred_location_id), {:class=> "width_250"} %>
+    </td>
+  </tr>
+  <tr>
+    <td class="ali_rt">Passport number : </td>
     <td><%= f.text_field :passport_number %></td>
   </tr>
   <tr>
-    <td>Pan number</td>
+    <td class="ali_rt">Pan number : </td>
     <td><%= f.text_field :pan_number %></td>
   </tr>
   <tr>
-    <td>Resume</td>
+    <td class="ali_rt">Resume : </td>
     <td><%= file_field :attachable, :uploaded_data %></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      &nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">      
+      <%= f.submit 'Cancel', :class=> "create_btn" %>
+      <% if controller.action_name == "create" || controller.action_name == "new" %>
+        <%= f.submit 'Create', :class=> "create_btn" %>
+      <% else %>
+        <%= f.submit 'Update', :class=> "create_btn" %>
+      <% end %>
+    </td>
   </tr>
 </table>

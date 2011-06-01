@@ -15,13 +15,13 @@ body
 {
 background: #000000 url('images/bg1.jpg');
 padding: 35px 0px 35px 0px;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; color: #333; text-align:left;
 }
+
 
 body,input
 {
 font-size: 10pt;
-font-family: "georgia", "times new roman", serif;
-color: #333333;
 }
 
 p

@@ -1,0 +1,28 @@
+<div class="contentarea">
+  <div>
+    <h3><strong>Skills</strong></h3>
+    <div class="create_new"><%= link_to image_tag('/images/edit.png', :title => "Create"), new_skill_path %></div>
+  </div>
+  <div class="clear"></div>
+  <div class="content">
+    <table class="emp_list">
+      <thead>
+        <tr>
+          <td width="24%">Name</td>
+          <td width="10%">Options</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @skills.each_with_index do |skill, index| %>
+          <tr class="row<%= index % 2 %>">
+            <td><%= skill.name %></td>
+            <td>&nbsp;&nbsp; <%= link_to image_tag('/images/edit.png', :title => "Edit"), edit_skill_path(skill) %> &nbsp;&nbsp;
+              <%= link_to image_tag('/images/delete.png', :title => "Delete"), skill, :confirm => 'Are you sure?', :method => :delete %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div style="padding: 10px"></div>
+    <%= will_paginate @skills %>
+  </div>
+</div>

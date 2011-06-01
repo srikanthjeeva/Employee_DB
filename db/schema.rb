@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110601055122) do
+ActiveRecord::Schema.define(:version => 20110601075908) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "parent_id"
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(:version => 20110601055122) do
     t.datetime "updated_at"
   end
 
+  create_table "skills", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "skill_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -45,14 +56,14 @@ ActiveRecord::Schema.define(:version => 20110601055122) do
     t.string   "organization"
     t.string   "designation"
     t.string   "current_organization"
-    t.float    "total_experience"
-    t.float    "relevant_experience"
-    t.float    "current_ctc"
-    t.float    "expected_ctc"
-    t.integer  "notice_period"
-    t.integer  "employee_type"
+    t.string   "total_experience"
+    t.string   "relevant_experience"
+    t.string   "current_ctc"
+    t.string   "expected_ctc"
+    t.string   "notice_period"
+    t.string   "employee_type"
     t.string   "qualification_id"
-    t.integer  "year_of_passout"
+    t.string   "year_of_passout"
     t.integer  "current_location_id"
     t.integer  "preferred_location_id"
     t.datetime "date_of_birth"

@@ -32,38 +32,38 @@ table.emp_list tbody tr.row1:hover td  { background-color: #ffd ; }
 
 
 .pagination {
-padding:0.3em;
-text-align:right;
+    padding:0.3em;
+    text-align:right;
 }
 .pagination a, .pagination span {
-padding:0.2em 0.5em;
+    padding:0.2em 0.5em;
 }
 .pagination span.disabled {
-color:#AAAAAA;
+    color:#AAAAAA;
 }
 .pagination span.current {
-color:#8FBF5D;
-font-weight:bold;
+    color:#8FBF5D;
+    font-weight:bold;
 }
 .pagination a {
-border:1px solid #DDDDDD;
-color:#0063DC;
-text-decoration:none;
+    border:1px solid #DDDDDD;
+    color:#0063DC;
+    text-decoration:none;
 }
 .pagination a:hover, .pagination a:focus {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:#0063DC none repeat scroll 0 0;
-border-color:#003366;
-color:white;
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#0063DC none repeat scroll 0 0;
+    border-color:#003366;
+    color:white;
 }
 .pagination .page_info {
-color:#AAAAAA;
-padding-top:0.8em;
+    color:#AAAAAA;
+    padding-top:0.8em;
 }
 .pagination .prev_page, .pagination .next_page {
-border-width:1px;
+    border-width:1px;
 }
 
 
@@ -75,3 +75,21 @@ border-width:1px;
 .create_new{
     float: right; font-size: 12px; padding-bottom:10px;
 }
+
+.width_250{
+    width:265px
+}
+
+.normalcontent{
+    font-size: 15px;
+ }
+
+.normalcontent input{
+    font-size: 15px !important;
+}
+
+.ali_rt{
+    text-align: right
+}
+
+.create_btn{width:100px; height:30px}

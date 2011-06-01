@@ -40,36 +40,44 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    @user = User.new(params[:user])
-    if params[:attachable] && params[:attachable][:uploaded_data]
-      @user.attachment = Attachment.create(params[:attachable])
-    end
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+    if params[:commit] == "Create"
+      @user = User.new(params[:user])
+      if params[:attachable] && params[:attachable][:uploaded_data]
+        @user.attachment = Attachment.create(params[:attachable])
       end
+      respond_to do |format|
+        if @user.save
+          format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+          format.xml  { render :xml => @user, :status => :created, :location => @user }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
+      end
+    else
+      redirect_to users_url
     end
   end
 
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = User.find(params[:id])
-    if params[:attachable] && params[:attachable][:uploaded_data]
-      @user.attachment = Attachment.create(params[:attachable])
-    end
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+    if  params[:commit] == "Update"
+      @user = User.find(params[:id])
+      if params[:attachable] && params[:attachable][:uploaded_data]
+        @user.attachment = Attachment.create(params[:attachable])
       end
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
+      end
+    else
+      redirect_to users_url
     end
   end
 
