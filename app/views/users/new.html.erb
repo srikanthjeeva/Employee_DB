@@ -1,7 +1,7 @@
 <div class="content">
   <h1>New user</h1>
 
-  <% form_for(@user) do |f| %>
+  <% form_for(@user, :html => {:multipart => true}) do |f| %>
     <%= f.error_messages %>
     <%= render :partial => "form", :locals => {:f => f} %>
     <p>

@@ -8,28 +8,34 @@
     <table class="emp_list">
       <thead>
         <tr>
-          <td width="24%">Name</td>
-          <td width="24%">Email</td>
+          <td width="20%">Name</td>
+          <td width="3%">Qualification</td>
+          <td width="20%">Email</td>
           <td width="20%">Phone</td>
           <td width="20%">organization</td>
-          <td width="10%">Options</td>
+          <td width="14%">Options</td>
         </tr>
       </thead>
       <tbody>
         <% @users.each_with_index do |user, index| %>
           <tr class="row<%= index % 2 %>">
             <td><%= user.name %></td>
+            <td><%= user.qualification_name %></td>
             <td><%= user.email %></td>
             <td><%= user.phone_number %></td>
             <td><%= user.organization %></td>
-            <td>&nbsp;&nbsp;<%= link_to image_tag('/images/view.png', :title => "View"), user %> &nbsp;&nbsp;
+            <td>
+              &nbsp;&nbsp;<%= link_to image_tag('/images/view.png', :title => "View"), user %> &nbsp;&nbsp;
               <%= link_to image_tag('/images/edit.png', :title => "Edit"), edit_user_path(user) %> &nbsp;&nbsp;
-              <%= link_to image_tag('/images/delete.png', :title => "Delete"), user, :confirm => 'Are you sure?', :method => :delete %></td>
+              <%= link_to image_tag('/images/delete.png', :title => "Delete"), user, :confirm => 'Are you sure?', :method => :delete %>
+            <% if user.attachment %>
+              &nbsp;&nbsp;<%= link_to image_tag('/images/document-export.png', :title => "Download"), download_file_user_path(user) %> &nbsp;&nbsp; <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>
     </table>
     <div style="padding: 10px"></div>
-    <%= will_paginate @users %>
+    <%= will_paginate @users, :query => params[:query] %>
   </div>
 </div>

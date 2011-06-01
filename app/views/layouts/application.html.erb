@@ -24,12 +24,12 @@
       </div>
 
 
-      <form method="post" action="">
+      <% form_tag search_users_path do %>
         <div id="search">
-          <input type="text" class="text" maxlength="64" name="keywords" />
+          <input type="text" class="text" maxlength="64" name="query" />
           <input type="submit" class="submit" value="Search" />
         </div>
-      </form>
+      <% end %>
 
       <div id="menu">
         <!-- HINT: Set the class of any menu link below to "active" to make it appear active -->

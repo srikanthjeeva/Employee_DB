@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :qualifications
 
-  map.resources :users
+  map.resources :users, :member => {:download_file => :get}, :collection => {:search => :get}
 
   map.root :controller => "users", :action => "index"
 

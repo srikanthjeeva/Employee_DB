@@ -75,6 +75,10 @@
     <td>Pan number</td>
     <td><%= @user.pan_number %></td>
   </tr>
+  <tr>
+    <td>Resume</td>
+    <td><%= link_to(@user.attachment.filename, @user.attachment.public_filename) rescue "-"%></td>
+  </tr>
 </table>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

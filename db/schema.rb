@@ -9,7 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110531102214) do
+ActiveRecord::Schema.define(:version => 20110601055122) do
+
+  create_table "attachments", :force => true do |t|
+    t.integer  "parent_id"
+    t.integer  "attachable_id"
+    t.integer  "attachable_type"
+    t.integer  "size"
+    t.string   "content_type"
+    t.string   "filename"
+    t.integer  "height"
+    t.integer  "width"
+    t.string   "thumbnail"
+    t.integer  "active",          :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "locations", :force => true do |t|
     t.string   "name"

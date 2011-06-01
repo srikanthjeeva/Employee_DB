@@ -3,7 +3,7 @@ class QualificationsController < ApplicationController
   # GET /qualifications.xml
   layout "application"
   def index
-    @qualifications = Qualification.all(:order => "name").paginate(:per_page => 20, :page => params[:page])
+    @qualifications = Qualification.all(:order => "name").paginate(:per_page =>@@per_page, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
